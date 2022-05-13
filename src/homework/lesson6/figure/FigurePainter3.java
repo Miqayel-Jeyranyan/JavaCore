@@ -1,6 +1,6 @@
 package homework.lesson6.figure;
 //ede k = enek 4 kstananak nuyn patker@ bayc kpac toxin
-public class FigureExample3 {
+public class FigurePainter3 {
     public static void main(String[] args) {
         for (int i = 0; i < 5; i++){
             for (int k =4; k > i; k--) {
