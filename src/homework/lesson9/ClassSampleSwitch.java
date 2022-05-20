@@ -17,7 +17,7 @@ public class ClassSampleSwitch {
                     System.out.println("i равно трем.");
                     break;
                 default:
-                    System.out.println("i больше трех.");
+                   System.out.println("i больше трех.");
             }
     }
 }

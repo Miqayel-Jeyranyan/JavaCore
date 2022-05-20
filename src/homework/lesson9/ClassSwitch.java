@@ -5,7 +5,7 @@ public class ClassSwitch {
         int month = 4;
         String season;
         switch (month) {
-            case 12:
+            case 0:
             case 1:
             case 2:
                 season = "зиме";

@@ -62,7 +62,7 @@ public class ArrayUtil {
         //Տպել մասիվի էլեմենտների գումարը։
         int sum = 0;
         for (int i = 0; i < array.length; i++) {
-            sum += array[i];
+            sum =++ array[i];
         }
         System.out.println("sum = " + sum);
         //Տպել մասիվի բոլոր թվերի միջին թվաբանականը:
