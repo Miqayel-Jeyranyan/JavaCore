@@ -11,8 +11,8 @@ public class LongClass {
         seconds = days * 24 * 60 * 60;
         distance = Lightspeed * seconds;
         System.out.print("za" + days);
-        System.out.print("dney svet praidyot okolo");
-        System.out.println(distance+ "mil");
+        System.out.print("dney svet praidyot okolo ");
+        System.out.println(distance + " mil");
 
 
     }

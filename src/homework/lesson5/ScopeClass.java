@@ -8,7 +8,7 @@ public class ScopeClass {
             int y = 20;
             System.out.println("x и у: " + x + " " + y);
             x = y * 2;
-            System.out.println("x povno"+x);
+            System.out.println("x povno "+x);
         }
     }
 }

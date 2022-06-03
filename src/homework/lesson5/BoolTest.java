@@ -10,8 +10,6 @@ public class BoolTest {
         int x = 20;
         int y = 30;
         boolean c = x < y;
-        if (c) {
-            System.out.println("c is true ");
-        }
+        System.out.println("c is true ");
     }
 }
