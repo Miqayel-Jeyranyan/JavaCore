@@ -1,4 +1,4 @@
-package homework.lesson11;
+package homework.lesson11chapter6;
 
 public class TestStack {
     public static void main(String[] args) {

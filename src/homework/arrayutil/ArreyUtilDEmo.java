@@ -4,11 +4,13 @@ public class ArreyUtilDEmo {
     public static void main(String[] args) {
         //Տպել մասիվի բոլոր էլեմենտները։
         ArrayUtil1 au = new ArrayUtil1();
-        au.lengtl();
+        int[] array = {45, 461, 155, -64, 160, 108, 907, -15, 54, 501, 2};
+        au.print(array);
+        System.out.println();
+        int max = au.max(array);
+        System.out.println("max = "+max);
 
-        int[] array1 = {45, 461, 155, -64, 160, 108, 907, -15, 54, 501, 2};
-        ArrayUtil1 max = new ArrayUtil1();
-        System.out.println("max =" + max.max(array1));
+
 
         int[] array2 = {45, 461, 155, -64, 160, 108, 907, -15, 54, 501, 2};
         ArrayUtil1 min = new ArrayUtil1();

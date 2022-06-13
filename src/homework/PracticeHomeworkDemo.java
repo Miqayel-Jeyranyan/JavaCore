@@ -17,7 +17,7 @@ public class PracticeHomeworkDemo {
         //վերադարձնել ընդունող բուլյանի ժխտված արժեքը։
         System.out.println(homeworke.reversBool(false));
         //վերադարձնել երկու մասիվի ամենամեծ length-ը
-        int[]array1=new int[12];
+        int[]array1=new int[26];
         int[]array2=new int[18];
         System.out.println(homeworke.maxLength(array1,array2));
 

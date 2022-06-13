@@ -1,15 +1,21 @@
 package homework.arrayutil;
 
 public class ArrayUtil1 {
-    public boolean number;
-    //Տպել մասիվի բոլոր էլեմենտները։
-    void lengtl() {
-        int[] array = {45, 461, 155, -64, 160, 108, 907, -15, 54, 501, 2};
-        for (int i = 0; i < array.length; i++) {
-            System.out.print(array[i] + " ");
+    void print(int[]array){
+        for (int i : array) {
+            System.out.print(i+" ");
+
         }
-        System.out.println();
     }
+//    public boolean number;
+    //Տպել մասիվի բոլոր էլեմենտները։
+//    void lengtl() {
+//        int[] array = {45, 461, 155, -64, 160, 108, 907, -15, 54, 501, 2};
+//        for (int i = 0; i < array.length; i++) {
+//            System.out.print(array[i] + " ");
+//        }
+//        System.out.println();
+//    }
     //  Տպել մասիվի ամենամեծ թիվը։
     int max(int[] array) {
 

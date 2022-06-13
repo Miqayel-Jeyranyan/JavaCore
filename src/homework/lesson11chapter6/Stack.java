@@ -1,4 +1,4 @@
-package homework.lesson11;
+package homework.lesson11chapter6;
 
 public class Stack {
     int stack[] = new int[10];
