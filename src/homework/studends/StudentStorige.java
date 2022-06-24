@@ -1,6 +1,6 @@
 package homework.studends;
 
-public class StudentStorije {
+public class StudentStorige {
 
     private Student[] array = new Student[10];
     private int size = 0;
@@ -50,12 +50,30 @@ public class StudentStorije {
 
     public void printStudentsByLesson(String lessonName) {
         for (int i = 0; i < size; i++) {
-            if (array[i].getLesson().equals(lessonName)){
+            if (array[i].getLesson().equals(lessonName)) {
                 System.out.println(array[i]);
             }
 
         }
     }
+
+    public void chanjLesson(int yandex, String lessoncChanje) {
+        if (yandex >= 0 && yandex < size) {
+            array[yandex].setLesson(lessoncChanje);
+        }
+    }
+
+
+    public void cityChange(int city,String cityChange) {
+        if (city>=0 && city <size){
+            array[city].setCity(cityChange);
+        }
+    }
 }
+
+
+
+
+
 
 

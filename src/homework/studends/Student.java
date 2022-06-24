@@ -9,6 +9,7 @@ public class Student {
     private String lesson;
 
 
+
     public Student(String name, String surnem, int age, String phoneNumber, String city,String lesson) {
         this.name = name;
         this.surnem = surnem;
@@ -16,7 +17,11 @@ public class Student {
         this.phoneNumber = phoneNumber;
         this.city = city;
         this.lesson=lesson;
+
     }
+
+
+
 
     public Student() {
     }
@@ -78,6 +83,7 @@ public class Student {
                 ", age=" + age +
                 ", phoneNumber='" + phoneNumber + '\'' +
                 ",lesson='"+lesson+'\''+
+
                 ", city='" + city + '\'' +
                 '}';
     }

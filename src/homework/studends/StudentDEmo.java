@@ -5,18 +5,19 @@ import java.util.Scanner;
 public class StudentDEmo {
 
     private static Scanner scanner = new Scanner(System.in);
-    private static StudentStorije studentStorije = new StudentStorije();
+    private static StudentStorige studentStorige = new StudentStorige();
 
     public static void main(String[] args) {
         boolean run = true;
         while (run) {
-            System.out.println("plise input 0 for exit");
-            System.out.println("plise input 1 for add student");
-            System.out.println("plise input 2 for print all student");
-            System.out.println("plise input 3 for print students count ");
-            System.out.println("plise input 4 for delete student by index");
-            System.out.println("plise input 5 for print  studens by lesson");
-
+            System.out.println("please input 0 for exit");
+            System.out.println("please input 1 for add student");
+            System.out.println("please input 2 for print all student");
+            System.out.println("please input 3 for print students count ");
+            System.out.println("please input 4 for delete student by index");
+            System.out.println("please input 5 for print  students by lesson");
+            System.out.println("please choose 6 for change students lesson ");
+            System.out.println("please choose 7 fore chenge students city");
             int command = Integer.parseInt(scanner.nextLine());
             switch (command) {
                 case 0:
@@ -26,23 +27,29 @@ public class StudentDEmo {
                     addStudent();
                     break;
                 case 2:
-                    studentStorije.print();
+                    studentStorige.print();
                     break;
                 case 3:
-                    System.out.println(studentStorije.getSize());
+                    System.out.println(studentStorige.getSize());
                     break;
                 case 4:
-                    studentStorije.print();
+                    studentStorige.print();
                     System.out.println("Please choose student index");
-                    int index=Integer.parseInt(scanner.nextLine());
-                    studentStorije.delete(index);
+                    int index = Integer.parseInt(scanner.nextLine());
+                    studentStorige.delete(index);
 
                     break;
                 case 5:
                     System.out.println("please input lesson name");
-                   String lessonName= scanner.nextLine();
-                   studentStorije.printStudentsByLesson(lessonName);
+                    String lessonName = scanner.nextLine();
+                    studentStorige.printStudentsByLesson(lessonName);
+                    break;
+                case 6:
+                   changeLesson();
                    break;
+                case 7:
+                    changeCity();
+                    break;
 
                 default:
                     System.err.println("Invalid command ,please try again");
@@ -51,6 +58,24 @@ public class StudentDEmo {
         }
 
 
+    }
+
+    private static void changeCity() {
+        System.out.println("please inpud studend index");
+
+        int index=Integer.parseInt(scanner.nextLine());
+        System.out.println("please inpud new city");
+        String cityChange=scanner.nextLine();
+        studentStorige.cityChange(index,cityChange);
+    }
+
+    private static void changeLesson() {
+        System.out.println("please inpud studend index");
+
+         int index=Integer.parseInt(scanner.nextLine());
+        System.out.println("please inpud new lesson");
+        String lessoncChanje=scanner.nextLine();
+        studentStorige.chanjLesson(index,lessoncChanje);
     }
 
     private static void addStudent() {
@@ -69,8 +94,9 @@ public class StudentDEmo {
 
         int age = Integer.parseInt(ageStr);
         Student student = new Student(name, surname, age, phoneNumber,city,lesson);
-        studentStorije.add(student);
+        studentStorige.add(student);
         System.out.println("Thank you, Studend added ");
+
 
     }
 }
