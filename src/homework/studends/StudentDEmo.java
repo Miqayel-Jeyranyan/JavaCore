@@ -8,7 +8,12 @@ public class StudentDEmo {
     private static StudentStorige studentStorige = new StudentStorige();
 
     public static void main(String[] args) {
+        //mxac tvel enk es usanoxnerin
+        studentStorige.add(new Student("poxos", "poxosyan", 13, "093111123", "gyumri", "java"));
+        studentStorige.add(new Student("petros", "ppetrosyan", 26, "093111323", "pariz", "Hayoc"));
+
         boolean run = true;
+
         while (run) {
             System.out.println("please input 0 for exit");
             System.out.println("please input 1 for add student");
@@ -33,20 +38,15 @@ public class StudentDEmo {
                     System.out.println(studentStorige.getSize());
                     break;
                 case 4:
-                    studentStorige.print();
-                    System.out.println("Please choose student index");
-                    int index = Integer.parseInt(scanner.nextLine());
-                    studentStorige.delete(index);
+                    deleteStudentByIndex();
 
                     break;
                 case 5:
-                    System.out.println("please input lesson name");
-                    String lessonName = scanner.nextLine();
-                    studentStorige.printStudentsByLesson(lessonName);
+                    serchStudentByLessonName();
                     break;
                 case 6:
-                   changeLesson();
-                   break;
+                    changeStudentLesson();
+                    break;
                 case 7:
                     changeCity();
                     break;
@@ -57,25 +57,47 @@ public class StudentDEmo {
 
         }
 
+    }
 
+    private static void serchStudentByLessonName() {
+        System.out.println("please input lesson name");
+        String lessonName = scanner.nextLine();
+        studentStorige.printStudentsByLesson(lessonName);
+    }
+
+    private static void deleteStudentByIndex() {
+        studentStorige.print();
+        System.out.println("Please choose student index");
+        int index = Integer.parseInt(scanner.nextLine());
+        studentStorige.delete(index);
+    }
+
+    private static void changeStudentLesson() {
+        studentStorige.print();
+        System.out.println("Please choose student index");
+        int index = Integer.parseInt(scanner.nextLine());
+        Student student = studentStorige.getStudentByIndex(index);
+        if (student != null) {
+            System.out.println("Please input new lesson name");
+            String lessonName = scanner.nextLine();
+            if (lessonName != null && !lessonName.trim().equals("")) {
+                student.setLesson(lessonName.trim());
+                System.out.println("lesson changed for student " + student.getName() + " " + student.getSurnem());
+            }
+
+        } else {
+            System.out.println("invalid index,please try again");
+            changeStudentLesson();
+        }
     }
 
     private static void changeCity() {
         System.out.println("please inpud studend index");
 
-        int index=Integer.parseInt(scanner.nextLine());
+        int city = Integer.parseInt(scanner.nextLine());
         System.out.println("please inpud new city");
-        String cityChange=scanner.nextLine();
-        studentStorige.cityChange(index,cityChange);
-    }
-
-    private static void changeLesson() {
-        System.out.println("please inpud studend index");
-
-         int index=Integer.parseInt(scanner.nextLine());
-        System.out.println("please inpud new lesson");
-        String lessoncChanje=scanner.nextLine();
-        studentStorige.chanjLesson(index,lessoncChanje);
+        String cityChange = scanner.nextLine();
+        studentStorige.cityChange(city, cityChange);
     }
 
     private static void addStudent() {
@@ -93,7 +115,7 @@ public class StudentDEmo {
         String lesson = scanner.nextLine();
 
         int age = Integer.parseInt(ageStr);
-        Student student = new Student(name, surname, age, phoneNumber,city,lesson);
+        Student student = new Student(name, surname, age, phoneNumber, city, lesson);
         studentStorige.add(student);
         System.out.println("Thank you, Studend added ");
 

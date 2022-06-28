@@ -38,7 +38,7 @@ public class StudentStorige {
     public void delete(int index) {
         if (index >= 0 && index < size) {
             for (int i = index; i < size; i++) {
-                array[index] = array[index + 1];
+                array[i] = array[i + 1];
 
             }
             size--;
@@ -57,10 +57,13 @@ public class StudentStorige {
         }
     }
 
-    public void chanjLesson(int yandex, String lessoncChanje) {
-        if (yandex >= 0 && yandex < size) {
-            array[yandex].setLesson(lessoncChanje);
+    public Student getStudentByIndex(int index){
+        if (index >= 0 && index < size){
+            return array[index];
+
         }
+        return null;
+
     }
 
 

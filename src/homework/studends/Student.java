@@ -2,7 +2,7 @@ package homework.studends;
 
 public class Student {
     private String name;
-    private String surnem;
+    private String surname;
     private int age;
     private String phoneNumber;
     private String city;
@@ -10,9 +10,9 @@ public class Student {
 
 
 
-    public Student(String name, String surnem, int age, String phoneNumber, String city,String lesson) {
+    public Student(String name, String surname, int age, String phoneNumber, String city,String lesson) {
         this.name = name;
-        this.surnem = surnem;
+        this.surname = surname;
         this.age = age;
         this.phoneNumber = phoneNumber;
         this.city = city;
@@ -35,11 +35,11 @@ public class Student {
     }
 
     public String getSurnem() {
-        return surnem;
+        return surname;
     }
 
     public void setSurnem(String surnem) {
-        this.surnem = surnem;
+        this.surname = surnem;
     }
 
     public int getAge() {
@@ -79,7 +79,7 @@ public class Student {
     public String toString() {
         return "Student{" +
                 "name='" + name + '\'' +
-                ", surnem='" + surnem + '\'' +
+                ", surnem='" + surname + '\'' +
                 ", age=" + age +
                 ", phoneNumber='" + phoneNumber + '\'' +
                 ",lesson='"+lesson+'\''+
